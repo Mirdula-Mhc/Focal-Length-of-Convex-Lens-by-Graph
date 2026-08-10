@@ -1,0 +1,285 @@
+fileFormatVersion: 2
+guid: 5c03ffeb219b8904990a85c6e7900445
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concave_Mirror
+    second: {fileID: 2100000, guid: b37f8d119cb72604c825bedf72d59d94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concave_Mirror_glass
+    second: {fileID: 2100000, guid: cfe4e7919c29dc04bbc669321a3beefd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lens_Holder
+    second: {fileID: 2100000, guid: 064dbf39af3f37d4a9ea8e48eef3bf9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Needle metal
+    second: {fileID: 2100000, guid: 8f0d4baff9f302b4e8b50847908be220, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Object_Needle_M
+    second: {fileID: 2100000, guid: 0831ab2366bb73149950067e84981aa8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Optical_Bench_M
+    second: {fileID: 2100000, guid: 3e3cbde08f9ff4b4fa0aae9253cc7e8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Physics Table
+    second: {fileID: 2100000, guid: dcea28e91900c3a43aa0b78f44feca5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scale 0-100____1
+    second: {fileID: 2100000, guid: 01f12c9ebfcd60e43b9089f9ebf4efc6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scale_M
+    second: {fileID: 2100000, guid: 16d5d37a4ed3d164e84a59147a78f17f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen
+    second: {fileID: 2100000, guid: 3cffcba5223ee774e82a612940809036, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen Stand
+    second: {fileID: 2100000, guid: eb2297610a8bf414a918a07bcd8f38b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Slider_M
+    second: {fileID: 2100000, guid: e1f219dbfa3261b45b6b69cb48d14e26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spirit Level
+    second: {fileID: 2100000, guid: 5addab76193b45444a6b995baffe61b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spirit Level Bubbl
+    second: {fileID: 2100000, guid: fd9a3776a50335c41a18780442e8c299, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Lens Holder_Material_AlbedoTransparency
+    second: {fileID: 2800000, guid: fa9b42ceaa43c034c98d2b20604d4d2a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Lens Holder_Material_MetallicSmoothness
+    second: {fileID: 2800000, guid: bc25ed8631318e04f8aac660762c036d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Lens Holder_Material_Normal
+    second: {fileID: 2800000, guid: d6fbd821b6c05a74385801567e28ed8d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Object Needle_Object_Needle_M_AlbedoTransparency
+    second: {fileID: 2800000, guid: 488dcabb6da19ea4988463769f633231, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Object Needle_Object_Needle_M_MetallicSmoothness
+    second: {fileID: 2800000, guid: 7c4805924047d474b85efb1e67868e1c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Object Needle_Object_Needle_M_Normal
+    second: {fileID: 2800000, guid: 9a9e389dee1bbb448bf01fbe5d42c701, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Optical Bench_Optical_Bench_M_AlbedoTransparency
+    second: {fileID: 2800000, guid: 344677437346afd4aa0c42cea0649e8b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Optical Bench_Optical_Bench_M_MetallicSmoothness
+    second: {fileID: 2800000, guid: 5d737da798e5aca41a3edd47e15dbd9a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Optical Bench_Optical_Bench_M_Normal
+    second: {fileID: 2800000, guid: a2ccc4592b1b28f4783c54685eabc4f8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Physics Table_Physics Table_AlbedoTransparency
+    second: {fileID: 2800000, guid: d8a595aa940d15d498f37492ead5a5df, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Physics Table_Physics Table_MetallicSmoothness
+    second: {fileID: 2800000, guid: 019061a6b1dcc1a4d914a05689914744, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Physics Table_Physics Table_Normal
+    second: {fileID: 2800000, guid: ff2fe3a63220b4f4e92af717b539057c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Scale 0-100____1
+    second: {fileID: 2800000, guid: fe9177e77ca7a9a4fb20b0857fa18861, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Slider_Slider_M_AlbedoTransparency
+    second: {fileID: 2800000, guid: 484ec72229f55cc43adef645a2712b68, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Slider_Slider_M_MetallicSmoothness
+    second: {fileID: 2800000, guid: 1939cbba167a45f499f1eb0d56084b96, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Slider_Slider_M_Normal
+    second: {fileID: 2800000, guid: d3e266963513c3b46b41aed09145b679, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Spirit Level_new_Spirit Level_AlbedoTransparency
+    second: {fileID: 2800000, guid: 04951d7df508f3d4291f84230418bd06, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Spirit Level_new_Spirit Level_Normal
+    second: {fileID: 2800000, guid: c4352aa3974330a47a08ccdf69c38f85, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: concave mirror_concave mirror_Normal
+    second: {fileID: 2800000, guid: bf36665344cfcb74683848dc39de182c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sceen 2_2K_MetallicSmoothness
+    second: {fileID: 2800000, guid: 9da612e912094ff42a1b9c72ab372ea9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sceen 2_2K_Normal
+    second: {fileID: 2800000, guid: dcd978f69dc373d49be994e18ada6592, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

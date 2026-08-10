@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 1d2f1de4e88ffad419adf51ce1d1ab06, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -371,6 +371,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1403983597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &314840037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 314840038}
+  - component: {fileID: 314840039}
+  m_Layer: 5
+  m_Name: Page_19
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &314840038
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314840037}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1593987473}
+  m_Father: {fileID: 1751467874}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &314840039
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314840037}
+  m_CullTransparentMesh: 1
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +445,7 @@ Light:
   serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -463,7 +508,7 @@ Transform:
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.09, y: 4.49, z: 6.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -549,6 +594,222 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1403983597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &589433404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 589433405}
+  - component: {fileID: 589433407}
+  - component: {fileID: 589433406}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &589433405
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589433404}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1278735531}
+  m_Father: {fileID: 2066397012}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 82, y: 4}
+  m_SizeDelta: {x: 612.4272, y: 436.7243}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &589433406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589433404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -1381755710, guid: 14e98ebf43778b3448a3fb907ea425e0, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2
+--- !u!222 &589433407
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589433404}
+  m_CullTransparentMesh: 1
+--- !u!1 &643188746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 643188747}
+  - component: {fileID: 643188749}
+  - component: {fileID: 643188748}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &643188747
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643188746}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1593987473}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.60849, y: 14.202301}
+  m_SizeDelta: {x: -72.3539, y: -66.2771}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &643188748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643188746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "                               Index error:\n\n Index correction for the
+    object distance,\n eo = lo - 1'o = 0 cm \nIndex correction for the image distance,\n
+    e= 1; - l'i = 0 cm \nWhere, 1., l; - Actual length between the optical centre
+    O of the lens and tip of the pin I'., I'i- Observed length of the index needle"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 356b1ee212a194b49bed1adb63017c1b, type: 2}
+  m_sharedMaterial: {fileID: -8232536831469020223, guid: 356b1ee212a194b49bed1adb63017c1b, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30
+  m_fontSizeBase: 30
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 4096
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &643188749
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643188746}
+  m_CullTransparentMesh: 1
 --- !u!1001 &667404824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -557,6 +818,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1751467874}
     m_Modifications:
+    - target: {fileID: 1266885313942635348, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266885313942635348, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266885313942635348, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266885313942635348, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392714993087192897, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392714993087192897, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392714993087192897, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392714993087192897, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195035310991186494, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195035310991186494, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195035310991186494, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195035310991186494, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3741956649242466251, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -640,6 +949,22 @@ PrefabInstance:
     - target: {fileID: 4148921365802624158, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
       propertyPath: m_Name
       value: BottomPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434845959272631780, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434845959272631780, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434845959272631780, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434845959272631780, guid: e12282d9cb1d0c44fa7b13d62d6755b2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -767,6 +1092,127 @@ Transform:
   m_Children: []
   m_Father: {fileID: 832243455}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &860974648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 860974649}
+  - component: {fileID: 860974651}
+  - component: {fileID: 860974650}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &860974649
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860974648}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1468707824}
+  m_Father: {fileID: 933138663}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 82, y: 4}
+  m_SizeDelta: {x: 612.4272, y: 436.7243}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &860974650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860974648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -1381755710, guid: 14e98ebf43778b3448a3fb907ea425e0, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2
+--- !u!222 &860974651
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860974648}
+  m_CullTransparentMesh: 1
+--- !u!1 &933138662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 933138663}
+  - component: {fileID: 933138664}
+  m_Layer: 5
+  m_Name: Page_56
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &933138663
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933138662}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 860974649}
+  m_Father: {fileID: 1751467874}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &933138664
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933138662}
+  m_CullTransparentMesh: 1
 --- !u!1 &943497037
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,9 +1425,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
-  field of view: 96
+  field of view: 40
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1007,13 +1453,153 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147446641}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.12919995, y: -0.023804734, z: 0.0030995854, w: -0.991328}
-  m_LocalPosition: {x: 18.91, y: 4.15, z: -82.57}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.57, y: 1.39, z: -2.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1278735530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1278735531}
+  - component: {fileID: 1278735533}
+  - component: {fileID: 1278735532}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1278735531
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278735530}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 589433405}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.60849, y: 14.202301}
+  m_SizeDelta: {x: -72.3539, y: -66.2771}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1278735532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278735530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "                               Index error:\n\n Index correction for the
+    object distance,\n eo = lo - 1'o = 0 cm \nIndex correction for the image distance,\n
+    e= 1; - l'i = 0 cm \nWhere, 1., l; - Actual length between the optical centre
+    O of the lens and tip of the pin I'., I'i- Observed length of the index needle"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 356b1ee212a194b49bed1adb63017c1b, type: 2}
+  m_sharedMaterial: {fileID: -8232536831469020223, guid: 356b1ee212a194b49bed1adb63017c1b, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30
+  m_fontSizeBase: 30
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 4096
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1278735533
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278735530}
+  m_CullTransparentMesh: 1
 --- !u!1 &1403983596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,6 +1635,146 @@ Transform:
   - {fileID: 218050258}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1468707823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1468707824}
+  - component: {fileID: 1468707826}
+  - component: {fileID: 1468707825}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1468707824
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468707823}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 860974649}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.60849, y: 14.202301}
+  m_SizeDelta: {x: -72.3539, y: -66.2771}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1468707825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468707823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "                               Index error:\n\n Index correction for the
+    object distance,\n eo = lo - 1'o = 0 cm \nIndex correction for the image distance,\n
+    e= 1; - l'i = 0 cm \nWhere, 1., l; - Actual length between the optical centre
+    O of the lens and tip of the pin I'., I'i- Observed length of the index needle"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 356b1ee212a194b49bed1adb63017c1b, type: 2}
+  m_sharedMaterial: {fileID: -8232536831469020223, guid: 356b1ee212a194b49bed1adb63017c1b, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30
+  m_fontSizeBase: 30
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 4096
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1468707826
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468707823}
+  m_CullTransparentMesh: 1
 --- !u!1 &1509291755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,11 +1804,533 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2330b6f59de4c2349ad2089aeb64866f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIPromptController
-  pages: []
+  pages:
+  - pageName: Page 1
+    pageText: This experiment is to find the focal length of a convex lens by plotting
+      graphs between u and v or between 1/u and 1/v. Identify the given components.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 2
+    pageText: Start the experiment to find the focal length of the lens by the distant
+      object method by dragging the lens holder onto the table and placing the lens
+      on it so that it faces a distant object.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 3
+    pageText: Now, place the screen on the other side of the lens on the table. To
+      get a well-illuminated distinct image, make sure that sufficient light enters
+      through the window and nothing obstructs its path.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 4
+    pageText: Click and drag the screen towards and away from the lens and notice
+      how the image changes.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 5
+    pageText: Place the screen at a suitable position to obtain a clear, sharp, and
+      inverted image of the tree.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 6
+    pageText: Now measure the distance between the lens and the screen. Note it as
+      the approximate focal length value.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 7
+    pageText: Drag the apparatus and place it on the table.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 8
+    pageText: Click on the optical bench to mark the lens position as O. Also, mark
+      the points as F.,F2.2F,2F, on both sides of the lens,
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 9
+    pageText: Drag the object needle and fix it in the upright at a point near 2F2
+      on one side of the lens.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 10
+    pageText: Enter the observed lens position, object position and object distance
+      values in the observation table.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 11
+    pageText: Use the given slider to adjust the height of the object needle to make
+      its tip lie on the principal axis.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 12
+    pageText: Observe through the other side of the lens. An inverted image of the
+      object can be seen.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 13
+    pageText: Now drag the image needle and place it near 2F1 on the other side of
+      the lens.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 14
+    pageText: Now move your eye towards the right and left of the pin using the slider.
+      The tip of the needle gets separated, so there is a parallax error.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 15
+    pageText: You can remove the parallax by dragging the image pin on the optical
+      bench slowly.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 16
+    pageText: Now, move your eye towards the right and left of the pin using the
+      provided slider.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 17
+    pageText: 'Enter the position of the image needle as observed on the optical
+      bench. '
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 18
+    pageText: Enter the value of the observed image distance by finding the difference
+      between the position of the lens and the image needle.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 19
+    pageText: We need to correct the index error. But our optical bench is well lubricated
+      and calibrated such that the index error is 0.
+    showDialogBox: 1
+    showAlternatePanels: 1
+    alternatePanels:
+    - panel: {fileID: 314840037}
+      stayInUpcomingPages: 0
+      enableOnce: 0
+      hasBeenEnabledOnce: 0
+  - pageName: Page 20
+    pageText: 'So, the corrected values of u and v remain unchanged and are
+
+      tabulated.'
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 21
+    pageText: 'Enter the correct values of 1/u, 1/v and focal length after rounding
+      off to three decimal places.
+
+      Note: Substitute the positive values of
+      u and v to calculate the focal length.'
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 22
+    pageText: 'Drag the object needle and fix it in the upright at a point near 2F2
+
+      on
+      one side of the lens.'
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 23
+    pageText: 'Enter the observed object position and object distance values in
+
+      the
+      observation table.'
+    showDialogBox: 0
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 24
+    pageText: 'Observe through the other side of the lens. An inverted image of
+
+      the
+      object can be seen.'
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 25
+    pageText: 'Now drag the image needle and place it near
+
+      2F1 on the other
+      side of the lens.'
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 26
+    pageText: 'Now move your eye towards the right and left of the pin using the
+
+      slider.
+      The tip of the needle gets separated, so there is a parallax
+
+      error.'
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 27
+    pageText: 'You can remove the parallax by dragging the image pin on the
+
+      optical
+      bench slowly.'
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 28
+    pageText: 'Now, move your eye towards the right and left of the pin using the
+
+      provided
+      slider.'
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 29
+    pageText: 'Enter the position of the image needle as observed on the optical
+
+      bench.'
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 30
+    pageText: 'Enter the value of the observed image distance by finding the
+
+      difference
+      between the position of the lens and the image needle.'
+    showDialogBox: 0
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 31
+    pageText: 'We need to correct the index error.
+
+      But our optical bench is
+      well lubricated and calibrated such that
+
+      the index error is 0.'
+    showDialogBox: 1
+    showAlternatePanels: 1
+    alternatePanels:
+    - panel: {fileID: 1853398951}
+      stayInUpcomingPages: 0
+      enableOnce: 0
+      hasBeenEnabledOnce: 0
+  - pageName: Page 32
+    pageText: 'So, the corrected values of u and v remain unchanged and are
+
+      tabulated.'
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 33
+    pageText: 'Enter the correct values of 1/u, 1/v and focal length after rounding
+      off to three decimal places.
+
+      Note: Substitute the positive values of
+      u and v to calculate the focal length.'
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 34
+    pageText: Drag the object needle and fix it in the upright at a point near 2F2
+      on one side of the lens.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 35
+    pageText: Enter the observed object position and object distance values in the
+      observation table.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 36
+    pageText: Observe through the other side of the lens. An inverted image of the
+      object can be seen.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 37
+    pageText: Now drag the image needle and place it near 2F1 on the other side of
+      the lens.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 38
+    pageText: Now move your eye towards the right and left of the pin using the slider.
+      The tip of the needle gets separated, so there is a parallax error.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 39
+    pageText: You can remove the parallax by dragging the image pin on the optical
+      bench slowly.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 40
+    pageText: Now, move your eye towards the right and left of the pin using the
+      provided slider.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 41
+    pageText: Enter the position of the image needle as observed on the optical bench.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 42
+    pageText: Enter the value of the observed image distance by finding the difference
+      between the position of the lens and the image needle.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 43
+    pageText: We need to correct the index error. But our optical bench is well lubricated
+      and calibrated such that the index error is O.
+    showDialogBox: 1
+    showAlternatePanels: 1
+    alternatePanels:
+    - panel: {fileID: 2066397011}
+      stayInUpcomingPages: 0
+      enableOnce: 0
+      hasBeenEnabledOnce: 0
+  - pageName: Page 44
+    pageText: 'So, the corrected values of u and v remain unchanged and are
+
+      tabulated.'
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 45
+    pageText: 'Enter the correct values of 1/u, 1/v and focal length after rounding
+      off to three decimal places.
+
+      Note: Substitute the positive values of
+      u and v to calculate the focal length.'
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 46
+    pageText: 'Drag the object needle and fix it in the upright at a point near 2F
+
+      on
+      one side of the lens.'
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 47
+    pageText: Enter the observed object position and object distance values in the
+      observation table.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 48
+    pageText: Observe through the other side of the lens. An inverted image of the
+      object can be seen.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 49
+    pageText: Now drag the image needle and place it near 2F, on the other side of
+      the lens.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 50
+    pageText: Now move your eye towards the right and left of the pin using the slider.
+      The tip of the needle gets separated, so there is a parallax error.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 51
+    pageText: 'You can remove the parallax by dragging the image pin on the
+
+      optical
+      bench slowly.'
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 52
+    pageText: Now, move your eye towards the right and left of the pin using the
+      provided slider.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 53
+    pageText: You can remove the parallax by dragging the image pin on the optical
+      bench slowly.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 54
+    pageText: Enter the position of the image needle as observed on the optical bench.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 55
+    pageText: Enter the value of the observed image distance by finding the difference
+      between the position of the lens and the image needle.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 56
+    pageText: We need to correct the index error. But our optical bench is well lubricated
+      and calibrated such that the index error is O.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels:
+    - panel: {fileID: 933138662}
+      stayInUpcomingPages: 0
+      enableOnce: 0
+      hasBeenEnabledOnce: 0
+  - pageName: Page 57
+    pageText: So, the corrected values of u and v remain unchanged and are tabulated.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 58
+    pageText: 'Enter the correct values of 1/u, 1/v and focal length after rounding
+      off to three decimal places.
+
+      Note: Substitute the positive values of
+      u and v to calculate the focal length.'
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 59
+    pageText: 'Drag the object needle and fix it in the upright at a point near 2F:
+      on one side of the lens.'
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 60
+    pageText: Enter the observed object position and object distance values in the
+      observation table.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 61
+    pageText: Observe through the other side of the lens. An inverted image of the
+      object can be seen.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 62
+    pageText: Now drag the image needle and place it near 2F, on the other side of
+      the lens.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 63
+    pageText: Now move your eye towards the right and left of the pin using the slider.
+      The tip of the needle gets separated, so there is a parallax error.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 64
+    pageText: You can remove the parallax by dragging the image pin on the optical
+      bench slowly.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 65
+    pageText: Now, move your eye towards the right and left of the pin using the
+      provided slider.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 66
+    pageText: You can remove the parallax by dragging the image pin on the optical
+      bench slowly.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 67
+    pageText: Enter the position of the image needle as observed on the optical bench.
+    showDialogBox: 1
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 68
+    pageText: 
+    showDialogBox: 0
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 69
+    pageText: 
+    showDialogBox: 0
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 70
+    pageText: 
+    showDialogBox: 0
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 71
+    pageText: 
+    showDialogBox: 0
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 72
+    pageText: 
+    showDialogBox: 0
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 73
+    pageText: 
+    showDialogBox: 0
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 74
+    pageText: 
+    showDialogBox: 0
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 75
+    pageText: 
+    showDialogBox: 0
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 76
+    pageText: 
+    showDialogBox: 0
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 77
+    pageText: 
+    showDialogBox: 0
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 78
+    pageText: 
+    showDialogBox: 0
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 79
+    pageText: 
+    showDialogBox: 0
+    showAlternatePanels: 0
+    alternatePanels: []
+  - pageName: Page 80
+    pageText: 
+    showDialogBox: 0
+    showAlternatePanels: 0
+    alternatePanels: []
   dialogPanel: {fileID: 144539735}
   dialogImage: {fileID: 144539736}
   dialogText: {fileID: 144539737}
-  commonDialogSprite: {fileID: 21300000, guid: fcdf00ffa8fd4314aa63955c6a9b5440, type: 3}
+  commonDialogSprite: {fileID: 21300000, guid: f6e10e55dc314094d81a7bdec29702b6, type: 3}
 --- !u!4 &1509291757
 Transform:
   m_ObjectHideFlags: 0
@@ -1098,6 +2346,222 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1403983597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1547325687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1547325688}
+  - component: {fileID: 1547325690}
+  - component: {fileID: 1547325689}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1547325688
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547325687}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1903357066}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.60849, y: 14.202301}
+  m_SizeDelta: {x: -72.3539, y: -66.2771}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1547325689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547325687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "                               Index error:\n\n Index correction for the
+    object distance,\n eo = lo - 1'o = 0 cm \nIndex correction for the image distance,\n
+    e= 1; - l'i = 0 cm \nWhere, 1., l; - Actual length between the optical centre
+    O of the lens and tip of the pin I'., I'i- Observed length of the index needle"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 356b1ee212a194b49bed1adb63017c1b, type: 2}
+  m_sharedMaterial: {fileID: -8232536831469020223, guid: 356b1ee212a194b49bed1adb63017c1b, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30
+  m_fontSizeBase: 30
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 4096
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1547325690
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547325687}
+  m_CullTransparentMesh: 1
+--- !u!1 &1593987472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1593987473}
+  - component: {fileID: 1593987475}
+  - component: {fileID: 1593987474}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1593987473
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593987472}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 643188747}
+  m_Father: {fileID: 314840038}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 82, y: 4}
+  m_SizeDelta: {x: 612.4272, y: 436.7243}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &1593987474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593987472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -1381755710, guid: 14e98ebf43778b3448a3fb907ea425e0, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2
+--- !u!222 &1593987475
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593987472}
+  m_CullTransparentMesh: 1
 --- !u!1 &1742227638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,6 +2688,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 144539734}
+  - {fileID: 314840038}
+  - {fileID: 1853398952}
+  - {fileID: 2066397012}
+  - {fileID: 933138663}
   - {fileID: 667404825}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1232,6 +2700,237 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1853398951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1853398952}
+  - component: {fileID: 1853398953}
+  m_Layer: 5
+  m_Name: Page_31
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1853398952
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853398951}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1903357066}
+  m_Father: {fileID: 1751467874}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1853398953
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853398951}
+  m_CullTransparentMesh: 1
+--- !u!1 &1903357065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1903357066}
+  - component: {fileID: 1903357068}
+  - component: {fileID: 1903357067}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1903357066
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903357065}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1547325688}
+  m_Father: {fileID: 1853398952}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 82, y: 4}
+  m_SizeDelta: {x: 612.4272, y: 436.7243}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &1903357067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903357065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -1381755710, guid: 14e98ebf43778b3448a3fb907ea425e0, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2
+--- !u!222 &1903357068
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903357065}
+  m_CullTransparentMesh: 1
+--- !u!1001 &2024097274
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5c03ffeb219b8904990a85c6e7900445, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5c03ffeb219b8904990a85c6e7900445, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5c03ffeb219b8904990a85c6e7900445, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5c03ffeb219b8904990a85c6e7900445, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5c03ffeb219b8904990a85c6e7900445, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5c03ffeb219b8904990a85c6e7900445, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5c03ffeb219b8904990a85c6e7900445, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5c03ffeb219b8904990a85c6e7900445, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5c03ffeb219b8904990a85c6e7900445, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5c03ffeb219b8904990a85c6e7900445, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1826302822288583648, guid: 5c03ffeb219b8904990a85c6e7900445, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0388
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c03ffeb219b8904990a85c6e7900445, type: 3}
+      propertyPath: m_Name
+      value: LevelDesign
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709162936738317857, guid: 5c03ffeb219b8904990a85c6e7900445, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0379
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5c03ffeb219b8904990a85c6e7900445, type: 3}
+--- !u!1 &2066397011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2066397012}
+  - component: {fileID: 2066397013}
+  m_Layer: 5
+  m_Name: Page_43
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2066397012
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066397011}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 589433405}
+  m_Father: {fileID: 1751467874}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2066397013
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066397011}
+  m_CullTransparentMesh: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1242,3 +2941,4 @@ SceneRoots:
   - {fileID: 943497038}
   - {fileID: 1742227639}
   - {fileID: 1403983597}
+  - {fileID: 2024097274}
