@@ -122,10 +122,11 @@ public class DropdownMainButton : MonoBehaviour
 
             if (disableButtonOnCorrect)
             {
-                var img = GetComponent<Image>();
-                if (img) Destroy(img);
+                //var img = GetComponent<Image>();
+                //if (img) Destroy(img);
 
-                if (button) Destroy(button);
+                //if (button) Destroy(button);
+                button.interactable = false;
             }
 
             if (currentPopup != null)

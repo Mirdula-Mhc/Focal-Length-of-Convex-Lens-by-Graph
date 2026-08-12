@@ -25,7 +25,7 @@ RectTransform:
   m_GameObject: {fileID: 5693957494366652843}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 0.0003272555, y: 0.0003272555, z: 0.0003272555}
+  m_LocalScale: {x: 0.0008, y: 0.0008, z: 0.0008}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4070667792150565839}
@@ -275,7 +275,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   correctClip: {fileID: 8300000, guid: ddb9b58d2abd67c4e9b146671ce2eb77, type: 3}
   wrongClip: {fileID: 8300000, guid: a762bb80a6ad8e44ba591816638bd09e, type: 3}
-  disableButtonOnCorrect: 0
+  disableButtonOnCorrect: 1
   direction: 1
   animDuration: 0.25
   distance: -125
