@@ -45,6 +45,7 @@ public class DropdownMainButton : MonoBehaviour
     private DropdownPopup popupScript;
     private GameObject currentFeedback;
 
+    public event System.Action OnCorrectAnswer;
     private bool hasSelected = true;
 
     private void Awake()
@@ -85,6 +86,8 @@ public class DropdownMainButton : MonoBehaviour
     public void OnOptionSelected(int index, bool isCorrect, string text)
     {
         hasSelected = true;
+        //if (isCorrect)
+        //    IsCorrect = true;
 
         // Update text
         if (outputText != null)
@@ -117,8 +120,9 @@ public class DropdownMainButton : MonoBehaviour
 
         if (isCorrect)
         {
+            OnCorrectAnswer?.Invoke();
             // 🔥 KEY CHANGE → Unlock Navigation
-            PageNavigationController.RequestNavigationUnlock();
+            //PageNavigationController.RequestNavigationUnlock();
 
             if (disableButtonOnCorrect)
             {
