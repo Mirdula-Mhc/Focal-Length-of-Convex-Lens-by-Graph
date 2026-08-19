@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// Eye-position parallax slider (Left/Right style, see Img4/5).
@@ -33,6 +34,8 @@ public class ParallaxEyeSlider : MonoBehaviour
     private bool completed;
     private Vector2 objectNeedleStartPos;
     private Vector2 imageNeedleStartPos;
+    private UnityEngine.EventSystems.EventTrigger sliderEventTrigger;
+    private UnityEngine.EventSystems.EventTrigger.Entry pointerUpEntry;
 
     private void Awake()
     {
@@ -46,7 +49,10 @@ public class ParallaxEyeSlider : MonoBehaviour
     private void OnEnable()
     {
         if (eyeSlider != null)
+        {
             eyeSlider.onValueChanged.AddListener(HandleSliderChanged);
+            AddPointerListener();
+        }
 
         ResetState();
     }
@@ -54,7 +60,44 @@ public class ParallaxEyeSlider : MonoBehaviour
     private void OnDisable()
     {
         if (eyeSlider != null)
+        {
             eyeSlider.onValueChanged.RemoveListener(HandleSliderChanged);
+            RemovePointerListener();
+        }
+    }
+
+    private void AddPointerListener()
+    {
+        if (eyeSlider == null)
+            return;
+
+        sliderEventTrigger = eyeSlider.GetComponent<UnityEngine.EventSystems.EventTrigger>();
+        if (sliderEventTrigger == null)
+        {
+            sliderEventTrigger = eyeSlider.gameObject.AddComponent<UnityEngine.EventSystems.EventTrigger>();
+        }
+
+        if (pointerUpEntry == null)
+        {
+            pointerUpEntry = new UnityEngine.EventSystems.EventTrigger.Entry
+            {
+                eventID = EventTriggerType.PointerUp
+            };
+            pointerUpEntry.callback.AddListener((data) => OnReleased());
+        }
+
+        if (!sliderEventTrigger.triggers.Contains(pointerUpEntry))
+        {
+            sliderEventTrigger.triggers.Add(pointerUpEntry);
+        }
+    }
+
+    private void RemovePointerListener()
+    {
+        if (sliderEventTrigger != null && pointerUpEntry != null)
+        {
+            sliderEventTrigger.triggers.Remove(pointerUpEntry);
+        }
     }
 
     /// <summary>
