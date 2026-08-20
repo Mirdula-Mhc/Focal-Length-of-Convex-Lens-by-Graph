@@ -40,24 +40,11 @@ public class TableManager : MonoBehaviour
         [Tooltip("0 = first input on this page, 1 = second, etc.")]
         public int orderOnPage;
 
-        [Header("Auto Fill On Page Enter")]
-        [Tooltip("If true, this cell will automatically fill and complete when entering a specific page.")]
-        public bool autoFillOnPageEnter;
-
-        [Tooltip("If true, auto-fills when entering this cell's pageIndex. If false, uses customAutoFillPageIndex.")]
-        public bool useCellPageIndexForAutoFill = true;
-
-        [Tooltip("Specific 0-based page index to trigger auto-fill on (used when useCellPageIndexForAutoFill is false).")]
-        public int customAutoFillPageIndex;
-
-        [Tooltip("Optional custom text to fill. If left empty, correctAnswer is used.")]
-        public string customAutoFillText;
-
-        [Tooltip("If true, invokes onCorrectAnswer event when auto-filled.")]
-        public bool triggerEventOnAutoFill = true;
-
-        [Tooltip("If true, briefly displays the correctFeedback image when auto-filled.")]
-        public bool showFeedbackOnAutoFill = false;
+        [Header("Auto Fill (Optional)")]
+        [Tooltip("Turn ON to skip the numpad entirely for this cell. It " +
+                 "auto-fills with correctAnswer as soon as the user " +
+                 "reaches this cell's own pageIndex - no typing needed.")]
+        public bool isAutoFillCell = false;
 
         [Header("Events")]
         [Tooltip("Called once when this cell is completed correctly.")]
@@ -76,31 +63,6 @@ public class TableManager : MonoBehaviour
     [Tooltip("Configure every editable table cell here.")]
     [SerializeField]
     private List<TableCell> tableCells = new List<TableCell>();
-
-    // =========================================================
-    // PAGE AUTO-FILL GROUPS (OPTIONAL BULK CONFIGURATION)
-    // =========================================================
-
-    [Serializable]
-    public class PageAutoFillGroup
-    {
-        [Tooltip("0-based page index that triggers this group auto-fill.")]
-        public int pageIndex;
-
-        [Tooltip("List of table cells to automatically fill when entering this page.")]
-        public List<TableCell> cellsToFill = new List<TableCell>();
-
-        [Tooltip("If true, invokes onCorrectAnswer events for these cells.")]
-        public bool triggerEvents = true;
-
-        [Tooltip("If true, briefly displays correct feedback for these cells.")]
-        public bool showFeedback = false;
-    }
-
-    [Header("Page Auto Fill Groups (Optional)")]
-    [Tooltip("Configure groups of cells that should automatically fill when entering a specific page.")]
-    [SerializeField]
-    private List<PageAutoFillGroup> pageAutoFillGroups = new List<PageAutoFillGroup>();
 
     // =========================================================
     // NUMPAD
@@ -125,7 +87,7 @@ public class TableManager : MonoBehaviour
     [SerializeField] private Button submitButton;
 
     // =========================================================
-    // AUTO FILL
+    // AUTO FILL (wrong-attempt bailout, unchanged from original)
     // =========================================================
 
     [Header("Auto Fill")]
@@ -202,12 +164,43 @@ public class TableManager : MonoBehaviour
                 cell.inputField.interactable = false;
             }
 
+            // Every cell starts fully hidden (opacity 0) until it
+            // becomes the active cell for its page.
+            SetCellOpacity(cell, 0f);
+
             // Feedback always begins hidden.
             if (cell.correctFeedback != null)
                 cell.correctFeedback.SetActive(false);
 
             if (cell.incorrectFeedback != null)
                 cell.incorrectFeedback.SetActive(false);
+        }
+    }
+
+    // =========================================================
+    // CELL VISIBILITY (OPACITY)
+    // =========================================================
+
+    /// <summary>
+    /// Fades the input field's own Graphic (background/box) to the given
+    /// alpha, without touching the field's text component. Used to:
+    /// - hide a cell entirely (alpha 0) while it's not the active cell
+    /// - show it fully (alpha 1) while the user is filling it in
+    /// - fade the box away (alpha 0) once completed, leaving just the
+    ///   text visible on top of it
+    /// </summary>
+    private void SetCellOpacity(TableCell cell, float alpha)
+    {
+        if (cell == null || cell.inputField == null)
+            return;
+
+        Graphic bg = cell.inputField.targetGraphic;
+
+        if (bg != null)
+        {
+            Color c = bg.color;
+            c.a = alpha;
+            bg.color = c;
         }
     }
 
@@ -273,107 +266,7 @@ public class TableManager : MonoBehaviour
         // Feedback from the previous page should not remain visible.
         HideAllFeedback();
 
-        // Process any cells configured to auto-fill on this page.
-        ProcessAutoFillForPage(pageIndex);
-
         // Determine which cell should now be active.
-        RefreshCurrentPage();
-    }
-
-    // =========================================================
-    // AUTO FILL ON PAGE ENTER
-    // =========================================================
-
-    private void ProcessAutoFillForPage(int pageIndex)
-    {
-        // 1. Process individual cell settings
-        foreach (TableCell cell in tableCells)
-        {
-            if (cell == null)
-                continue;
-
-            if (!cell.autoFillOnPageEnter)
-                continue;
-
-            int triggerPage = cell.useCellPageIndexForAutoFill ? cell.pageIndex : cell.customAutoFillPageIndex;
-            if (triggerPage == pageIndex && !cell.completed)
-            {
-                string textToFill = !string.IsNullOrEmpty(cell.customAutoFillText)
-                    ? cell.customAutoFillText
-                    : cell.correctAnswer;
-
-                FillAndCompleteCell(cell, textToFill, cell.triggerEventOnAutoFill, cell.showFeedbackOnAutoFill);
-            }
-        }
-
-        // 2. Process page auto-fill groups
-        foreach (PageAutoFillGroup group in pageAutoFillGroups)
-        {
-            if (group == null || group.pageIndex != pageIndex)
-                continue;
-
-            if (group.cellsToFill == null)
-                continue;
-
-            foreach (TableCell cell in group.cellsToFill)
-            {
-                if (cell == null || cell.completed)
-                    continue;
-
-                FillAndCompleteCell(cell, cell.correctAnswer, group.triggerEvents, group.showFeedback);
-            }
-        }
-    }
-
-    private void FillAndCompleteCell(TableCell cell, string text, bool triggerEvent, bool showFeedback)
-    {
-        if (cell == null)
-            return;
-
-        if (cell.inputField != null)
-        {
-            cell.inputField.text = text;
-            cell.inputField.interactable = false;
-        }
-
-        cell.completed = true;
-
-        if (showFeedback)
-        {
-            ShowTemporaryFeedback(cell, showCorrect: true);
-        }
-
-        if (triggerEvent)
-        {
-            cell.onCorrectAnswer?.Invoke();
-        }
-    }
-
-    /// <summary>
-    /// Manually auto-fills a specific cell and marks it completed.
-    /// </summary>
-    public void AutoFillSpecificCell(TableCell cell, string customValue = null, bool triggerEvent = true, bool showFeedback = false)
-    {
-        if (cell == null)
-            return;
-
-        string val = string.IsNullOrEmpty(customValue) ? cell.correctAnswer : customValue;
-        FillAndCompleteCell(cell, val, triggerEvent, showFeedback);
-        RefreshCurrentPage();
-    }
-
-    /// <summary>
-    /// Auto-fills all cells assigned to a specific page index.
-    /// </summary>
-    public void AutoFillCellsForPage(int pageIndex, bool triggerEvents = true, bool showFeedback = false)
-    {
-        foreach (TableCell cell in tableCells)
-        {
-            if (cell != null && cell.pageIndex == pageIndex && !cell.completed)
-            {
-                FillAndCompleteCell(cell, cell.correctAnswer, triggerEvents, showFeedback);
-            }
-        }
         RefreshCurrentPage();
     }
 
@@ -384,6 +277,10 @@ public class TableManager : MonoBehaviour
     private void RefreshCurrentPage()
     {
         LockAllCells();
+
+        // Reveal any linked cells on this page whose source cell is
+        // already completed, before deciding what the user needs to type.
+        RevealLinkedCellsForPage(currentPageIndex);
 
         List<TableCell> pageCells = GetCellsForPage(currentPageIndex);
 
@@ -408,17 +305,72 @@ public class TableManager : MonoBehaviour
             if (cell.completed)
                 continue;
 
+            // Linked cells are never unlocked for numpad entry - they
+            // only get filled by RevealLinkedCellsForPage above, once
+            // their source cell is done. Skip past them here.
+            if (cell.isAutoFillCell)
+                continue;
+
             UnlockCell(cell);
             return;
         }
 
         // Reaching this point means every table cell
-        // assigned to this page has been completed.
+        // assigned to this page has been completed (or is still
+        // waiting on a source cell elsewhere - see note below).
         activeCell = null;
 
         SetAutoFillVisible(false);
 
-        PageNavigationController.RequestNavigationUnlock();
+        // Only unlock navigation once every cell on this page - including
+        // linked ones - is actually completed.
+        if (AllCellsOnPageCompleted(pageCells))
+            PageNavigationController.RequestNavigationUnlock();
+    }
+
+    /// <summary>
+    /// Fills in any TableCell on this page that has Is Auto Fill Cell
+    /// turned on. No dependency on any other cell - it simply reveals
+    /// itself with correctAnswer the moment the user reaches its page.
+    /// </summary>
+    private void RevealLinkedCellsForPage(int pageIndex)
+    {
+        foreach (TableCell cell in tableCells)
+        {
+            if (cell == null || cell.completed)
+                continue;
+
+            if (cell.pageIndex != pageIndex)
+                continue;
+
+            if (!cell.isAutoFillCell)
+                continue;
+
+            if (cell.inputField != null)
+                cell.inputField.text = cell.correctAnswer;
+
+            cell.completed = true;
+
+            if (cell.inputField != null)
+                cell.inputField.interactable = false;
+
+            // Same rule as a normally-completed cell: box fades away,
+            // only the text remains visible.
+            SetCellOpacity(cell, 0f);
+
+            cell.onCorrectAnswer?.Invoke();
+        }
+    }
+
+    private bool AllCellsOnPageCompleted(List<TableCell> pageCells)
+    {
+        foreach (TableCell cell in pageCells)
+        {
+            if (cell != null && !cell.completed)
+                return false;
+        }
+
+        return true;
     }
 
     private List<TableCell> GetCellsForPage(int pageIndex)
@@ -449,6 +401,13 @@ public class TableManager : MonoBehaviour
                 continue;
 
             cell.inputField.interactable = false;
+
+            // Hide every cell that isn't completed - only the active
+            // cell (set right after this, in UnlockCell) should be
+            // visible for entry. Completed cells stay at 0 (box hidden,
+            // their text remains visible on its own).
+            if (!cell.completed)
+                SetCellOpacity(cell, 0f);
         }
 
         activeCell = null;
@@ -475,6 +434,9 @@ public class TableManager : MonoBehaviour
         }
 
         cell.inputField.interactable = true;
+
+        // The active cell is the only one visible for numpad entry.
+        SetCellOpacity(cell, 1f);
 
         activeCell = cell;
 
@@ -565,7 +527,7 @@ public class TableManager : MonoBehaviour
             activeCell.inputField.text.Trim();
 
         string expected =
-            activeCell.correctAnswer.Trim();
+            (activeCell.correctAnswer ?? "").Trim();
 
         if (entered == expected)
         {
@@ -631,6 +593,9 @@ public class TableManager : MonoBehaviour
 
         // Lock it immediately.
         completedCell.inputField.interactable = false;
+
+        // Fade the input box away - only the answer text remains visible.
+        SetCellOpacity(completedCell, 0f);
 
         // Show THIS cell's correct feedback.
         ShowTemporaryFeedback(
