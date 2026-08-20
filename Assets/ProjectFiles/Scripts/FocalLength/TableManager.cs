@@ -27,11 +27,16 @@ public class TableManager : MonoBehaviour
         public string correctAnswer;
 
         [Header("Feedback")]
-        [Tooltip("Correct image belonging to this cell.")]
-        public GameObject correctFeedback;
+        [Tooltip("Color the input field flashes briefly on a correct answer, before reverting.")]
+        public Color correctFlashColor = Color.green;
 
-        [Tooltip("Incorrect image belonging to this cell.")]
-        public GameObject incorrectFeedback;
+        [Tooltip("Color the input field flashes briefly on a wrong answer, before reverting.")]
+        public Color incorrectFlashColor = Color.red;
+
+        // Runtime only - the field's original color, captured once so
+        // flashes always revert to the true starting color.
+        [NonSerialized] public Color originalColor;
+        [NonSerialized] public bool originalColorCaptured;
 
         [Header("Page Flow")]
         [Tooltip("0-based page index from PageNavigationController.")]
@@ -82,6 +87,7 @@ public class TableManager : MonoBehaviour
 
     [Header("Numpad - Controls")]
     [SerializeField] private Button decimalButton;
+    [SerializeField] private Button plusMinusButton;
     [SerializeField] private Button backspaceButton;
     [SerializeField] private Button clearButton;
     [SerializeField] private Button submitButton;
@@ -162,18 +168,20 @@ public class TableManager : MonoBehaviour
 
                 // All cells begin locked.
                 cell.inputField.interactable = false;
+
+                // Capture the field's real starting color once, so
+                // flashes always have a true color to revert to.
+                if (!cell.originalColorCaptured &&
+                    cell.inputField.targetGraphic != null)
+                {
+                    cell.originalColor = cell.inputField.targetGraphic.color;
+                    cell.originalColorCaptured = true;
+                }
             }
 
             // Every cell starts fully hidden (opacity 0) until it
             // becomes the active cell for its page.
             SetCellOpacity(cell, 0f);
-
-            // Feedback always begins hidden.
-            if (cell.correctFeedback != null)
-                cell.correctFeedback.SetActive(false);
-
-            if (cell.incorrectFeedback != null)
-                cell.incorrectFeedback.SetActive(false);
         }
     }
 
@@ -238,6 +246,9 @@ public class TableManager : MonoBehaviour
 
         if (decimalButton)
             decimalButton.onClick.AddListener(AddDecimal);
+
+        if (plusMinusButton)
+            plusMinusButton.onClick.AddListener(ToggleSign);
 
         if (backspaceButton)
             backspaceButton.onClick.AddListener(Backspace);
@@ -478,6 +489,31 @@ public class TableManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Toggles the leading minus sign on the active cell's current value.
+    /// Empty field + toggle just inserts "-", ready for digits after it.
+    /// </summary>
+    public void ToggleSign()
+    {
+        if (!CanEditActiveCell())
+            return;
+
+        string value = activeCell.inputField.text;
+
+        if (string.IsNullOrEmpty(value))
+        {
+            activeCell.inputField.text = "-";
+        }
+        else if (value.StartsWith("-"))
+        {
+            activeCell.inputField.text = value.Substring(1);
+        }
+        else
+        {
+            activeCell.inputField.text = "-" + value;
+        }
+    }
+
     public void Backspace()
     {
         if (!CanEditActiveCell())
@@ -558,11 +594,8 @@ public class TableManager : MonoBehaviour
             $"{wrongCell.wrongAttempts}/{wrongAttemptsForAutoFill}"
         );
 
-        // Show this specific cell's wrong image.
-        ShowTemporaryFeedback(
-            wrongCell,
-            showCorrect: false
-        );
+        // Flash this field red briefly, then it reverts to normal.
+        FlashCellColor(wrongCell, correct: false);
 
         // Automatically clear incorrect input.
         wrongCell.inputField.text = "";
@@ -594,14 +627,9 @@ public class TableManager : MonoBehaviour
         // Lock it immediately.
         completedCell.inputField.interactable = false;
 
-        // Fade the input box away - only the answer text remains visible.
-        SetCellOpacity(completedCell, 0f);
-
-        // Show THIS cell's correct feedback.
-        ShowTemporaryFeedback(
-            completedCell,
-            showCorrect: true
-        );
+        // Flash the field green briefly - RevertFlashAfterDelay fades
+        // the box to alpha 0 afterward, leaving just the answer text.
+        FlashCellColor(completedCell, correct: true);
 
         // Hide Auto Fill because this field is finished.
         SetAutoFillVisible(false);
@@ -673,66 +701,67 @@ public class TableManager : MonoBehaviour
     }
 
     // =========================================================
-    // FEEDBACK
+    // FEEDBACK (COLOR FLASH)
     // =========================================================
 
-    private void ShowTemporaryFeedback(
-        TableCell cell,
-        bool showCorrect)
+    /// <summary>
+    /// Flashes the input field's background to green (correct) or red
+    /// (incorrect), then reverts it to its original color after
+    /// feedbackDuration. For a correct answer, the field is also faded
+    /// to alpha 0 right after the flash, since the field gets replaced
+    /// by plain answer text at that point (see CompleteActiveCell).
+    /// </summary>
+    private void FlashCellColor(TableCell cell, bool correct)
     {
-        if (cell == null)
+        if (cell == null || cell.inputField == null)
             return;
 
-        // If this cell already has a feedback timer running,
-        // stop it before starting a new one.
-        if (feedbackRoutines.TryGetValue(
-            cell,
-            out Coroutine existingRoutine))
+        Graphic bg = cell.inputField.targetGraphic;
+
+        if (bg == null)
+            return;
+
+        // If this cell already has a flash running, stop it first so
+        // rapid wrong-answers don't stack coroutines on the same cell.
+        if (feedbackRoutines.TryGetValue(cell, out Coroutine existing))
         {
-            if (existingRoutine != null)
-                StopCoroutine(existingRoutine);
+            if (existing != null)
+                StopCoroutine(existing);
 
             feedbackRoutines.Remove(cell);
         }
 
-        // Reset both feedback objects first.
-        if (cell.correctFeedback != null)
-            cell.correctFeedback.SetActive(false);
+        Color flashColor = correct
+            ? cell.correctFlashColor
+            : cell.incorrectFlashColor;
 
-        if (cell.incorrectFeedback != null)
-            cell.incorrectFeedback.SetActive(false);
+        // Flashes only ever happen while a cell is the active, fully
+        // visible cell - always flash at full alpha rather than reading
+        // whatever the graphic's alpha happens to report this frame.
+        flashColor.a = 1f;
+        bg.color = flashColor;
 
-        // Show requested feedback.
-        if (showCorrect)
-        {
-            if (cell.correctFeedback != null)
-                cell.correctFeedback.SetActive(true);
-        }
-        else
-        {
-            if (cell.incorrectFeedback != null)
-                cell.incorrectFeedback.SetActive(true);
-        }
-
-        // Start timer to hide it again.
-        Coroutine routine = StartCoroutine(
-            HideFeedbackAfterDelay(cell)
-        );
-
+        Coroutine routine = StartCoroutine(RevertFlashAfterDelay(cell, correct));
         feedbackRoutines[cell] = routine;
     }
 
-    private IEnumerator HideFeedbackAfterDelay(TableCell cell)
+    private IEnumerator RevertFlashAfterDelay(TableCell cell, bool correct)
     {
         yield return new WaitForSeconds(feedbackDuration);
 
-        if (cell != null)
+        if (cell != null && cell.inputField != null &&
+            cell.inputField.targetGraphic != null)
         {
-            if (cell.correctFeedback != null)
-                cell.correctFeedback.SetActive(false);
-
-            if (cell.incorrectFeedback != null)
-                cell.incorrectFeedback.SetActive(false);
+            if (correct)
+            {
+                // Correct + completed cells end up as plain text -
+                // fade the box away instead of reverting its color.
+                SetCellOpacity(cell, 0f);
+            }
+            else
+            {
+                cell.inputField.targetGraphic.color = cell.originalColor;
+            }
         }
 
         feedbackRoutines.Remove(cell);
@@ -740,26 +769,25 @@ public class TableManager : MonoBehaviour
 
     private void HideAllFeedback()
     {
-        // Stop every currently running feedback timer.
-        foreach (Coroutine routine in feedbackRoutines.Values)
+        // Stop every currently running flash timer and snap each
+        // affected cell straight back to its resting state.
+        foreach (KeyValuePair<TableCell, Coroutine> kvp in feedbackRoutines)
         {
-            if (routine != null)
-                StopCoroutine(routine);
+            if (kvp.Value != null)
+                StopCoroutine(kvp.Value);
+
+            TableCell cell = kvp.Key;
+
+            if (cell == null || cell.inputField == null ||
+                cell.inputField.targetGraphic == null)
+                continue;
+
+            if (cell.completed)
+                SetCellOpacity(cell, 0f);
+            else
+                cell.inputField.targetGraphic.color = cell.originalColor;
         }
 
         feedbackRoutines.Clear();
-
-        // Hide every correct/wrong image.
-        foreach (TableCell cell in tableCells)
-        {
-            if (cell == null)
-                continue;
-
-            if (cell.correctFeedback != null)
-                cell.correctFeedback.SetActive(false);
-
-            if (cell.incorrectFeedback != null)
-                cell.incorrectFeedback.SetActive(false);
-        }
     }
 }
