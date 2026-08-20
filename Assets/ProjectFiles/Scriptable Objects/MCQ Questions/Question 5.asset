@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d01fd2d64a9249049aaa77d5c12a82fe, type: 3}
+  m_Name: Question 5
+  m_EditorClassIdentifier: 
+  questionText: '7. The radius of curvature of the plane side of a
+
+    plano-convex
+    lens is .......'
+  referenceImage: {fileID: 0}
+  explanationText: In a plano-convex lens, the radius of curvature of the plane side
+    is equal to infinity. As the lens needs to be part of the sphere and for it to
+    be flat, the radius of the sphere has to be infinity.
+  options:
+  - infinity
+  - Zero
+  - One
+  - None of the above
+  correctOptionIndex: 0

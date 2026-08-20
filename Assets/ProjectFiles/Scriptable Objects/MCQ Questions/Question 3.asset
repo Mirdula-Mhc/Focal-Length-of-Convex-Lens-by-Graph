@@ -10,16 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d01fd2d64a9249049aaa77d5c12a82fe, type: 3}
-  m_Name: Question 1
+  m_Name: Question 3
   m_EditorClassIdentifier: 
-  questionText: '2. The thicker the convex lens, the ........... its focal
+  questionText: '4.The virtual image produced by a lens is always
 
-    length.'
+    erect.'
   referenceImage: {fileID: 0}
-  explanationText: The bending of rays is maximal at the top and bottom of the lens.
-    A thicker lens having greater curvature bends the light more and thus has a shorter
-    focal length.
+  explanationText: Virtual images are always erect and laterally inverted.
   options:
-  - Shorter
-  - Longer
-  correctOptionIndex: 1
+  - True
+  - false
+  correctOptionIndex: 0
